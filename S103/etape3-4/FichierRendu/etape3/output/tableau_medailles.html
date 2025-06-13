@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau des medailles - JO Paris 2024</title>
+    <style>
+        @media print {
+            @page {
+                size: A4 landscape;
+                margin: 0.1cm;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            max-width: 297mm;
+            max-height: 210mm;
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            padding-top: 1px;
+            width: 100%;
+            height: 10px;
+        }
+
+        header h1 {
+            font-size: 10px;
+            text-align: center;
+            flex: 1;
+        }
+
+        header img {
+            max-width: 45px;
+            height: auto;
+            opacity: 1.0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 6px;
+            margin-top: 12px;
+        }
+
+        tr {
+            page-break-inside: avoid;
+            height: 9px;
+        }
+
+        tr:first-child {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        td, th {
+            border: 1px solid #ddd;
+            padding: 0px;
+            text-align: center;
+            vertical-align: middle;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        td:nth-child(1), th:nth-child(1) {
+            width: 25px;
+        }
+
+        td:nth-child(2), th:nth-child(2) {
+            width: 55px;
+        }
+
+        td:nth-child(3), th:nth-child(3),
+        td:nth-child(4), th:nth-child(4),
+        td:nth-child(5), th:nth-child(5) {
+            width: 12px;
+        }
+
+        td:nth-child(6), th:nth-child(6) {
+            width: 15px;
+        }
+
+        td:nth-child(7), th:nth-child(7) {
+            width: 18px;
+        }
+
+        .flag {
+            height: 6px;
+            vertical-align: middle;
+            margin-right: 1px;
+        }
+
+        .medals {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Tableau des médailles - Jeux Olympiques Paris 2024</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR45IwMHj8YH341Rpk_h4YnyZYPcjcmbjMLHA&s" alt="Logo JO Paris 2024">
+</header>
+<table>
+<tr><th>Rang</th><th>Pays</th><th>Or</th><th>Argent</th><th>Bronze</th><th>Total</th><th>%</th></tr>
+<tr><td>1</td><td><img src="drapeaux/largeur_20/us.png" class="flag">Etats-Unis</td><td class="medals">40</td><td class="medals">44</td><td class="medals">42</td><td class="medals">126</td><td class="medals">12,1</td></tr>
+<tr><td>2</td><td><img src="drapeaux/largeur_20/cn.png" class="flag">Chine</td><td class="medals">40</td><td class="medals">27</td><td class="medals">24</td><td class="medals">91</td><td class="medals">8,8</td></tr>
+<tr><td>3</td><td><img src="drapeaux/largeur_20/jp.png" class="flag">Japon</td><td class="medals">20</td><td class="medals">12</td><td class="medals">13</td><td class="medals">45</td><td class="medals">4,3</td></tr>
+<tr><td>4</td><td><img src="drapeaux/largeur_20/au.png" class="flag">Australie</td><td class="medals">18</td><td class="medals">19</td><td class="medals">16</td><td class="medals">53</td><td class="medals">5,1</td></tr>
+<tr><td>5</td><td><img src="drapeaux/largeur_20/fr.png" class="flag">France</td><td class="medals">16</td><td class="medals">26</td><td class="medals">22</td><td class="medals">64</td><td class="medals">6,2</td></tr>
+<tr><td>6</td><td><img src="drapeaux/largeur_20/nl.png" class="flag">Pays-Bas</td><td class="medals">15</td><td class="medals">7</td><td class="medals">12</td><td class="medals">34</td><td class="medals">3,3</td></tr>
+<tr><td>7</td><td><img src="drapeaux/largeur_20/gb.png" class="flag">Grande-Bretagne</td><td class="medals">14</td><td class="medals">22</td><td class="medals">29</td><td class="medals">65</td><td class="medals">6,3</td></tr>
+<tr><td>9</td><td><img src="drapeaux/largeur_20/it.png" class="flag">Italie</td><td class="medals">12</td><td class="medals">13</td><td class="medals">15</td><td class="medals">40</td><td class="medals">3,8</td></tr>
+<tr><td>10</td><td><img src="drapeaux/largeur_20/de.png" class="flag">Allemagne</td><td class="medals">12</td><td class="medals">13</td><td class="medals">8</td><td class="medals">33</td><td class="medals">3,2</td></tr>
+<tr><td>11</td><td><img src="drapeaux/largeur_20/nz.png" class="flag">Nouvelle-Zélande</td><td class="medals">10</td><td class="medals">7</td><td class="medals">3</td><td class="medals">20</td><td class="medals">1,9</td></tr>
+<tr><td>12</td><td><img src="drapeaux/largeur_20/ca.png" class="flag">Canada</td><td class="medals">9</td><td class="medals">7</td><td class="medals">11</td><td class="medals">27</td><td class="medals">2,6</td></tr>
+<tr><td>13</td><td><img src="drapeaux/largeur_20/uz.png" class="flag">Ouzbékistan</td><td class="medals">8</td><td class="medals">2</td><td class="medals">3</td><td class="medals">13</td><td class="medals">1,3</td></tr>
+<tr><td>14</td><td><img src="drapeaux/largeur_20/hu.png" class="flag">Hongrie</td><td class="medals">6</td><td class="medals">7</td><td class="medals">6</td><td class="medals">19</td><td class="medals">1,8</td></tr>
+<tr><td>15</td><td><img src="drapeaux/largeur_20/es.png" class="flag">Espagne</td><td class="medals">5</td><td class="medals">4</td><td class="medals">9</td><td class="medals">18</td><td class="medals">1,7</td></tr>
+<tr><td>16</td><td><img src="drapeaux/largeur_20/se.png" class="flag">Suède</td><td class="medals">4</td><td class="medals">4</td><td class="medals">3</td><td class="medals">11</td><td class="medals">1,1</td></tr>
+<tr><td>17</td><td><img src="drapeaux/largeur_20/ke.png" class="flag">Kenya</td><td class="medals">4</td><td class="medals">2</td><td class="medals">5</td><td class="medals">11</td><td class="medals">1,1</td></tr>
+<tr><td>18</td><td><img src="drapeaux/largeur_20/no.png" class="flag">Norvège</td><td class="medals">4</td><td class="medals">1</td><td class="medals">3</td><td class="medals">8</td><td class="medals">0,8</td></tr>
+<tr><td>19</td><td><img src="drapeaux/largeur_20/ie.png" class="flag">Irlande</td><td class="medals">4</td><td class="medals">0</td><td class="medals">3</td><td class="medals">7</td><td class="medals">0,7</td></tr>
+<tr><td>20</td><td><img src="drapeaux/largeur_20/br.png" class="flag">Brésil</td><td class="medals">3</td><td class="medals">7</td><td class="medals">10</td><td class="medals">20</td><td class="medals">1,9</td></tr>
+<tr><td>21</td><td><img src="drapeaux/largeur_20/ir.png" class="flag">Iran</td><td class="medals">3</td><td class="medals">6</td><td class="medals">3</td><td class="medals">12</td><td class="medals">1,2</td></tr>
+<tr><td>22</td><td><img src="drapeaux/largeur_20/ua.png" class="flag">Ukraine</td><td class="medals">3</td><td class="medals">5</td><td class="medals">4</td><td class="medals">12</td><td class="medals">1,2</td></tr>
+<tr><td>23</td><td><img src="drapeaux/largeur_20/ro.png" class="flag">Roumanie</td><td class="medals">3</td><td class="medals">4</td><td class="medals">2</td><td class="medals">9</td><td class="medals">0,9</td></tr>
+<tr><td>24</td><td><img src="drapeaux/largeur_20/ge.png" class="flag">Géorgie</td><td class="medals">3</td><td class="medals">3</td><td class="medals">1</td><td class="medals">7</td><td class="medals">0,7</td></tr>
+<tr><td>25</td><td><img src="drapeaux/largeur_20/be.png" class="flag">Belgique</td><td class="medals">3</td><td class="medals">1</td><td class="medals">6</td><td class="medals">10</td><td class="medals">1,0</td></tr>
+<tr><td>26</td><td><img src="drapeaux/largeur_20/bg.png" class="flag">Bulgarie</td><td class="medals">3</td><td class="medals">1</td><td class="medals">3</td><td class="medals">7</td><td class="medals">0,7</td></tr>
+<tr><td>27</td><td><img src="drapeaux/largeur_20/rs.png" class="flag">Serbie</td><td class="medals">3</td><td class="medals">1</td><td class="medals">1</td><td class="medals">5</td><td class="medals">0,5</td></tr>
+<tr><td>29</td><td><img src="drapeaux/largeur_20/dk.png" class="flag">Danemark</td><td class="medals">2</td><td class="medals">2</td><td class="medals">5</td><td class="medals">9</td><td class="medals">0,9</td></tr>
+<tr><td>30</td><td><img src="drapeaux/largeur_20/az.png" class="flag">Azerbaïdjan</td><td class="medals">2</td><td class="medals">2</td><td class="medals">3</td><td class="medals">7</td><td class="medals">0,7</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/hr.png" class="flag">Croatie</td><td class="medals">2</td><td class="medals">2</td><td class="medals">3</td><td class="medals">7</td><td class="medals">0,7</td></tr>
+<tr><td>32</td><td><img src="drapeaux/largeur_20/cu.png" class="flag">Cuba</td><td class="medals">2</td><td class="medals">1</td><td class="medals">6</td><td class="medals">9</td><td class="medals">0,9</td></tr>
+<tr><td>33</td><td><img src="drapeaux/largeur_20/bh.png" class="flag">Bahrein</td><td class="medals">2</td><td class="medals">1</td><td class="medals">1</td><td class="medals">4</td><td class="medals">0,4</td></tr>
+<tr><td>34</td><td><img src="drapeaux/largeur_20/si.png" class="flag">Slovénie</td><td class="medals">2</td><td class="medals">1</td><td class="medals">0</td><td class="medals">3</td><td class="medals">0,3</td></tr>
+<tr><td>35</td><td><img src="drapeaux/largeur_20/tw.png" class="flag">Taiwan</td><td class="medals">2</td><td class="medals">0</td><td class="medals">5</td><td class="medals">7</td><td class="medals">0,7</td></tr>
+<tr><td>36</td><td><img src="drapeaux/largeur_20/at.png" class="flag">Autriche</td><td class="medals">2</td><td class="medals">0</td><td class="medals">3</td><td class="medals">5</td><td class="medals">0,5</td></tr>
+<tr><td>37</td><td><img src="drapeaux/largeur_20/hk.png" class="flag">Hong-Kong</td><td class="medals">2</td><td class="medals">0</td><td class="medals">2</td><td class="medals">4</td><td class="medals">0,4</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/ph.png" class="flag">Philippines</td><td class="medals">2</td><td class="medals">0</td><td class="medals">2</td><td class="medals">4</td><td class="medals">0,4</td></tr>
+<tr><td>39</td><td><img src="drapeaux/largeur_20/dz.png" class="flag">Algérie</td><td class="medals">2</td><td class="medals">0</td><td class="medals">1</td><td class="medals">3</td><td class="medals">0,3</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/id.png" class="flag">Indonésie</td><td class="medals">2</td><td class="medals">0</td><td class="medals">1</td><td class="medals">3</td><td class="medals">0,3</td></tr>
+<tr><td>41</td><td><img src="drapeaux/largeur_20/il.png" class="flag">Israël</td><td class="medals">1</td><td class="medals">5</td><td class="medals">1</td><td class="medals">7</td><td class="medals">0,7</td></tr>
+<tr><td>42</td><td><img src="drapeaux/largeur_20/pl.png" class="flag">Pologne</td><td class="medals">1</td><td class="medals">4</td><td class="medals">5</td><td class="medals">10</td><td class="medals">1,0</td></tr>
+<tr><td>43</td><td><img src="drapeaux/largeur_20/kz.png" class="flag">Kazakhstan</td><td class="medals">1</td><td class="medals">3</td><td class="medals">3</td><td class="medals">7</td><td class="medals">0,7</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/jm.png" class="flag">Jamaïque</td><td class="medals">1</td><td class="medals">3</td><td class="medals">2</td><td class="medals">6</td><td class="medals">0,6</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/th.png" class="flag">Thaïlande</td><td class="medals">1</td><td class="medals">3</td><td class="medals">2</td><td class="medals">6</td><td class="medals">0,6</td></tr>
+<tr><td>47</td><td><img src="drapeaux/largeur_20/et.png" class="flag">Ethiopie</td><td class="medals">1</td><td class="medals">3</td><td class="medals">0</td><td class="medals">4</td><td class="medals">0,4</td></tr>
+<tr><td>48</td><td><img src="drapeaux/largeur_20/ch.png" class="flag">Suisse</td><td class="medals">1</td><td class="medals">2</td><td class="medals">5</td><td class="medals">8</td><td class="medals">0,8</td></tr>
+<tr><td>49</td><td><img src="drapeaux/largeur_20/ec.png" class="flag">Equateur</td><td class="medals">1</td><td class="medals">2</td><td class="medals">2</td><td class="medals">5</td><td class="medals">0,5</td></tr>
+<tr><td>50</td><td><img src="drapeaux/largeur_20/pt.png" class="flag">Portugal</td><td class="medals">1</td><td class="medals">2</td><td class="medals">1</td><td class="medals">4</td><td class="medals">0,4</td></tr>
+<tr><td>51</td><td><img src="drapeaux/largeur_20/gr.png" class="flag">Grèce</td><td class="medals">1</td><td class="medals">1</td><td class="medals">6</td><td class="medals">8</td><td class="medals">0,8</td></tr>
+<tr><td>52</td><td><img src="drapeaux/largeur_20/ar.png" class="flag">Argentine</td><td class="medals">1</td><td class="medals">1</td><td class="medals">1</td><td class="medals">3</td><td class="medals">0,3</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/eg.png" class="flag">Egypte</td><td class="medals">1</td><td class="medals">1</td><td class="medals">1</td><td class="medals">3</td><td class="medals">0,3</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/tn.png" class="flag">Tunisie</td><td class="medals">1</td><td class="medals">1</td><td class="medals">1</td><td class="medals">3</td><td class="medals">0,3</td></tr>
+<tr><td>55</td><td><img src="drapeaux/largeur_20/bw.png" class="flag">Botswana</td><td class="medals">1</td><td class="medals">1</td><td class="medals">0</td><td class="medals">2</td><td class="medals">0,2</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/cl.png" class="flag">Chili</td><td class="medals">1</td><td class="medals">1</td><td class="medals">0</td><td class="medals">2</td><td class="medals">0,2</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/ug.png" class="flag">Ouganda</td><td class="medals">1</td><td class="medals">1</td><td class="medals">0</td><td class="medals">2</td><td class="medals">0,2</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/lc.png" class="flag">Sainte-Lucie</td><td class="medals">1</td><td class="medals">1</td><td class="medals">0</td><td class="medals">2</td><td class="medals">0,2</td></tr>
+<tr><td>60</td><td><img src="drapeaux/largeur_20/gt.png" class="flag">Guatemala</td><td class="medals">1</td><td class="medals">0</td><td class="medals">1</td><td class="medals">2</td><td class="medals">0,2</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/ma.png" class="flag">Maroc</td><td class="medals">1</td><td class="medals">0</td><td class="medals">1</td><td class="medals">2</td><td class="medals">0,2</td></tr>
+<tr><td>62</td><td><img src="drapeaux/largeur_20/dm.png" class="flag">Dominique</td><td class="medals">1</td><td class="medals">0</td><td class="medals">0</td><td class="medals">1</td><td class="medals">0,1</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/pk.png" class="flag">Pakistan</td><td class="medals">1</td><td class="medals">0</td><td class="medals">0</td><td class="medals">1</td><td class="medals">0,1</td></tr>
+<tr><td>64</td><td><img src="drapeaux/largeur_20/tr.png" class="flag">Turquie</td><td class="medals">0</td><td class="medals">3</td><td class="medals">5</td><td class="medals">8</td><td class="medals">0,8</td></tr>
+<tr><td>65</td><td><img src="drapeaux/largeur_20/mx.png" class="flag">Mexique</td><td class="medals">0</td><td class="medals">3</td><td class="medals">2</td><td class="medals">5</td><td class="medals">0,5</td></tr>
+<tr><td>66</td><td><img src="drapeaux/largeur_20/am.png" class="flag">Arménie</td><td class="medals">0</td><td class="medals">3</td><td class="medals">1</td><td class="medals">4</td><td class="medals">0,4</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/co.png" class="flag">Colombie</td><td class="medals">0</td><td class="medals">3</td><td class="medals">1</td><td class="medals">4</td><td class="medals">0,4</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/kg.png" class="flag">Kirghizistan</td><td class="medals">0</td><td class="medals">2</td><td class="medals">4</td><td class="medals">6</td><td class="medals">0,6</td></tr>
+<tr><td>70</td><td><img src="drapeaux/largeur_20/lt.png" class="flag">Lituanie</td><td class="medals">0</td><td class="medals">2</td><td class="medals">2</td><td class="medals">4</td><td class="medals">0,4</td></tr>
+<tr><td>71</td><td><img src="drapeaux/largeur_20/in.png" class="flag">Inde</td><td class="medals">0</td><td class="medals">1</td><td class="medals">5</td><td class="medals">6</td><td class="medals">0,6</td></tr>
+<tr><td>72</td><td><img src="drapeaux/largeur_20/md.png" class="flag">Moldavie</td><td class="medals">0</td><td class="medals">1</td><td class="medals">3</td><td class="medals">4</td><td class="medals">0,4</td></tr>
+<tr><td>73</td><td><img src="drapeaux/largeur_20/xk.png" class="flag">Kosovo</td><td class="medals">0</td><td class="medals">1</td><td class="medals">1</td><td class="medals">2</td><td class="medals">0,2</td></tr>
+<tr><td>74</td><td><img src="drapeaux/largeur_20/cy.png" class="flag">Chypre</td><td class="medals">0</td><td class="medals">1</td><td class="medals">0</td><td class="medals">1</td><td class="medals">0,1</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/fj.png" class="flag">Fidji</td><td class="medals">0</td><td class="medals">1</td><td class="medals">0</td><td class="medals">1</td><td class="medals">0,1</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/jo.png" class="flag">Jordanie</td><td class="medals">0</td><td class="medals">1</td><td class="medals">0</td><td class="medals">1</td><td class="medals">0,1</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/mn.png" class="flag">Mongolie</td><td class="medals">0</td><td class="medals">1</td><td class="medals">0</td><td class="medals">1</td><td class="medals">0,1</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/pa.png" class="flag">Panama</td><td class="medals">0</td><td class="medals">1</td><td class="medals">0</td><td class="medals">1</td><td class="medals">0,1</td></tr>
+<tr><td>79</td><td><img src="drapeaux/largeur_20/tj.png" class="flag">Tadjikistan</td><td class="medals">0</td><td class="medals">0</td><td class="medals">3</td><td class="medals">3</td><td class="medals">0,3</td></tr>
+<tr><td>80</td><td><img src="drapeaux/largeur_20/al.png" class="flag">Albanie</td><td class="medals">0</td><td class="medals">0</td><td class="medals">2</td><td class="medals">2</td><td class="medals">0,2</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/gd.png" class="flag">Grenade</td><td class="medals">0</td><td class="medals">0</td><td class="medals">2</td><td class="medals">2</td><td class="medals">0,2</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/my.png" class="flag">Malaisie</td><td class="medals">0</td><td class="medals">0</td><td class="medals">2</td><td class="medals">2</td><td class="medals">0,2</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/pr.png" class="flag">Porto-Rico</td><td class="medals">0</td><td class="medals">0</td><td class="medals">2</td><td class="medals">2</td><td class="medals">0,2</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/pe.png" class="flag">Pérou</td><td class="medals">0</td><td class="medals">0</td><td class="medals">1</td><td class="medals">1</td><td class="medals">0,1</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/qa.png" class="flag">Qatar</td><td class="medals">0</td><td class="medals">0</td><td class="medals">1</td><td class="medals">1</td><td class="medals">0,1</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/sg.png" class="flag">Singapour</td><td class="medals">0</td><td class="medals">0</td><td class="medals">1</td><td class="medals">1</td><td class="medals">0,1</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/sk.png" class="flag">Slovaquie</td><td class="medals">0</td><td class="medals">0</td><td class="medals">1</td><td class="medals">1</td><td class="medals">0,1</td></tr>
+<tr><td>-</td><td><img src="drapeaux/largeur_20/zm.png" class="flag">Zambie</td><td class="medals">0</td><td class="medals">0</td><td class="medals">1</td><td class="medals">1</td><td class="medals">0,1</td></tr>
+</table></body></html>

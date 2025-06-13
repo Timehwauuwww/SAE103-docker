@@ -1,0 +1,68 @@
+#!/bin/bash
+
+# Definition des chemins
+WORKING_DIR="$(pwd)"
+MEDALS_XLSX="Tableau des medailles v2.xlsx"
+OUTPUT_DIR="output"
+HTML_FILE="$OUTPUT_DIR/tableau_medailles.html"
+PDF_FILE="$OUTPUT_DIR/tableau_medailles.pdf"
+
+# Creation du dossier de sortie
+mkdir -p "$OUTPUT_DIR"
+
+# 1. Execution du script de tri des medailles
+echo "etape 1: Tri des medailles..."
+bash ./tri_medaille.sh
+
+# 2. Telechargement des drapeaux
+echo "etape 2: Telechargement des drapeaux..."
+bash ./script_download.sh
+
+# 3. Generation du HTML
+echo "etape 3: Generation du HTML..."
+cat > "$HTML_FILE" << EOF
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau des medailles - JO Paris 2024</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .logo { max-width: 200px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .flag { height: 20px; vertical-align: middle; margin-right: 10px; }
+        .medals { text-align: center; }
+        @media print {
+            table { column-count: 2; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Tableau des medailles - JO Paris 2024</h1>
+    <img src="logo_jo.png" alt="Logo JO Paris 2024" class="logo">
+EOF
+
+# Ajouter le contenu du tableau depuis resultat.csv
+echo "<table>" >> "$HTML_FILE"
+echo "<tr><th>Rang</th><th>Pays</th><th>Or</th><th>Argent</th><th>Bronze</th><th>Total</th><th>Pourcentage</th></tr>" >> "$HTML_FILE"
+
+# Calculer le total general des medailles
+TOTAL_MEDALS=$(awk -F',' 'NR>1{sum+=$6}END{print sum}' resultat.csv)
+
+# Generer les lignes du tableau 
+awk -F',' -v total="$TOTAL_MEDALS" 'NR>1{
+    percentage = ($6 / total) * 100;
+    iso = tolower($1);
+    printf "<tr><td>%s</td><td><img src=\"drapeau/largeur_20/%s.png\" class=\"flag\">%s</td><td class=\"medals\">%s</td><td class=\"medals\">%s</td><td class=\"medals\">%s</td><td class=\"medals\">%s</td><td class=\"medals\">%.1f%%</td></tr>\n", 
+    $1, iso, $2, $3, $4, $5, $6, percentage
+}' resultat.csv >> "$HTML_FILE"
+
+echo "</table></body></html>" >> "$HTML_FILE"
+
+# 4. Conversion en PDF avec Docker
+echo "etape 4: Generation du PDF..."
+docker run --rm -v "$WORKING_DIR/$OUTPUT_DIR:/work" sae103-html2pdf \
+    weasyprint "/work/tableau_medailles.html" "/work/tableau_medailles.pdf"
+
+echo "Traitement termine. Le PDF a ete genere dans $PDF_FILE"

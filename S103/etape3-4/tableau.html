@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau des Médailles - JO Paris 2024</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 1cm;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: auto;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 5px;
+      text-align: center;
+    }
+    img {
+      width: 20px;
+      height: auto;
+    }
+    .columns {
+      column-count: 2; /* Divise en colonnes pour les grands tableaux */
+      column-gap: 2cm;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo-jo-paris2024.png" alt="Logo JO Paris 2024" width="100">
+    <h1>Tableau des Médailles - JO Paris 2024</h1>
+  </header>
+  <div class="columns">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Drapeau</th>
+          <th>Pays</th>
+          <th>Or</th>
+          <th>Argent</th>
+          <th>Bronze</th>
+          <th>Total</th>
+          <th>%</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Exemple d'une ligne -->
+        <tr>
+          <td>1</td>
+          <td><img src="flags/france.png" alt="France"></td>
+          <td>France</td>
+          <td>10</td>
+          <td>8</td>
+          <td>6</td>
+          <td>24</td>
+          <td>15%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
